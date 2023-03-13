@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "webhint.vscode-webhint",
+    "leizongmin.node-module-intellisense",
+    "streetsidesoftware.code-spell-checker",
+    "wix.glean",
+    "ZixuanChen.vitest-explorer",
+    "styled-components.vscode-styled-components"
+  ],
+  "unwantedRecommendations": []
+}

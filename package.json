@@ -1,0 +1,64 @@
+{
+  "name": "defi-index",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
+    "dev": "vite",
+    "build": "tsc -p tsconfig.prod.json && vite build",
+    "preview": "vite preview",
+    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
+    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
+    "lint": "pnpm lint:fix ",
+    "type-check": "tsc",
+    "analyze": "ANALYZE=true yarn build",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "query-string": "^7.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^3.3.0",
+    "@types/luxon": "^3.0.1",
+    "@types/node": "^18.7.15",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "@vitejs/plugin-react": "^2.1.0",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.7",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-prefer-function-component": "^3.0.0",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-unicorn": "^43.0.2",
+    "husky": "^8.0.1",
+    "hygen": "^6.2.10",
+    "jsdom": "^20.0.0",
+    "optionator": "^0.9.1",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.7.1",
+    "rollup": "^2.79.0",
+    "rollup-plugin-polyfill-node": "^0.10.2",
+    "rollup-plugin-visualizer": "^5.8.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vite-plugin-checker": "^0.5.1",
+    "vite-tsconfig-paths": "^3.5.0"
+  },
+  "browserslist": {
+    "production": "Edge >= 18, Firefox >= 60, Chrome >= 61, Safari >= 11, Opera >= 48",
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version"
+    ]
+  }
+}
