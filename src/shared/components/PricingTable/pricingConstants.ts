@@ -1,8 +1,9 @@
-interface IPricing {
+export interface IPricing {
   title: string
   description: string
   features: string[]
   price: number
+  isNew: boolean
 }
 
 const BasicPricing: IPricing = {
@@ -10,6 +11,7 @@ const BasicPricing: IPricing = {
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   features: ['10 GB Storage', '5 Users', '10 Domains', 'Basic Support'],
   price: 9.99,
+  isNew: false,
 }
 
 const ProPricing: IPricing = {
@@ -17,6 +19,7 @@ const ProPricing: IPricing = {
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   features: ['100 GB Storage', '10 Users', '100 Domains', 'Pro Support'],
   price: 19.99,
+  isNew: false,
 }
 
 // const EnterprisePricing: IPricing = {
@@ -24,6 +27,7 @@ const ProPricing: IPricing = {
 //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 //   features: ['Unlimited Storage', 'Unlimited Users', 'Unlimited Domains', 'Enterprise Support'],
 //   price: 29.99,
+//   isNew: true,
 // }
 
 const PricingData = [BasicPricing, ProPricing]

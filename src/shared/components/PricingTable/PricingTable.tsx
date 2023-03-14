@@ -1,11 +1,37 @@
-import { PricingData } from './pricingConstants'
+import { FC } from 'react'
 
-const PricingCard = () => {
+import { IPricing, PricingData } from './pricingConstants'
+
+interface PricingCardProps {
+  pricing: IPricing
+}
+
+const PricingCard: FC<PricingCardProps> = ({ pricing }) => {
   return (
-    <div className="card w-96 bg-base-100 shadow-xl flex-1">
+    <div className="card w-96 bg-base-100 shadow-xl flex-1 hover:shadow-none">
+      <figure className="px-10 pt-10">
+        <img src="https://picsum.photos/400/100" className="rounded-xl" alt="picsum" />
+      </figure>
       <div className="card-body">
-        <h2 className="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <h2 className="card-title">
+          {pricing.title}
+          {pricing.isNew && <div className="badge badge-secondary">NEW</div>}
+        </h2>
+        <p>{pricing.description}</p>
+
+        {pricing.features && (
+          <ul className="list-disc list-inside">
+            {pricing.features.map((feature, index) => (
+              <li key={index}>{feature}</li>
+            ))}
+          </ul>
+        )}
+
+        <div className="flex flex-col my-6">
+          <p className="text-gray-800 font-medium mb-2">Price:</p>
+          <p className="text-3xl font-semibold mb-2">${pricing.price}/month</p>
+        </div>
+
         <div className="card-actions justify-end">
           <button className="btn btn-primary">Buy Now</button>
         </div>
@@ -16,8 +42,8 @@ const PricingCard = () => {
 
 const PricingTable = () => {
   return (
-    <div className="flex flex-col bg-base-200 rounded-lg shadow-md p-6 mx-4 w-full justify-center">
-      <div className="flex flex-col justify-center">
+    <div className="flex flex-col bg-base-200 rounded-lg shadow-md p-6 mx-4 justify-center max-w-7xl">
+      <div className="flex flex-col justify-center items-center">
         <h2 className="text-2xl font-medium mb-4">Pricing Table</h2>
         <p className="text-gray-600 text-sm mb-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -25,8 +51,8 @@ const PricingTable = () => {
       </div>
 
       <div className="flex flex-row gap-4 flex-wrap">
-        {PricingData.map((_pricing, index) => (
-          <PricingCard key={index} />
+        {PricingData.map((pricing, index) => (
+          <PricingCard pricing={pricing} key={index} />
         ))}
       </div>
     </div>
