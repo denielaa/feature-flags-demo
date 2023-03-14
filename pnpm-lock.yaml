@@ -9,6 +9,7 @@ specifiers:
   '@types/react-dom': ^18.0.6
   '@typescript-eslint/eslint-plugin': ^5.36.2
   '@typescript-eslint/parser': ^5.36.2
+  '@unleash/proxy-client-react': ^3.5.2
   '@vitejs/plugin-react': ^2.1.0
   autoprefixer: ^10.4.14
   daisyui: ^2.51.3
@@ -38,16 +39,19 @@ specifiers:
   rollup-plugin-visualizer: ^5.8.1
   tailwindcss: ^3.2.7
   typescript: ^4.8.2
+  unleash-proxy-client: ^2.4.3
   vite: ^3.1.0
   vite-plugin-checker: ^0.5.1
   vite-tsconfig-paths: ^3.5.0
 
 dependencies:
+  '@unleash/proxy-client-react': 3.5.2_unleash-proxy-client@2.4.3
   hygen: 6.2.11
   query-string: 7.1.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
+  unleash-proxy-client: 2.4.3
 
 devDependencies:
   '@trivago/prettier-plugin-sort-imports': 3.3.0_prettier@2.7.1
@@ -786,6 +790,14 @@ packages:
       '@typescript-eslint/types': 5.36.2
       eslint-visitor-keys: 3.3.0
     dev: true
+
+  /@unleash/proxy-client-react/3.5.2_unleash-proxy-client@2.4.3:
+    resolution: {integrity: sha512-5Y3sfZadCPmJ3xaXrcIlrYeVVYzz7JQF8zDu9x46Ea2uBM7A5lVpYfdoIVkTnuK6xFoPxyByUGHhSNuH24x1bA==}
+    peerDependencies:
+      unleash-proxy-client: ^2.4.3
+    dependencies:
+      unleash-proxy-client: 2.4.3
+    dev: false
 
   /@vitejs/plugin-react/2.1.0_vite@3.1.0:
     resolution: {integrity: sha512-am6rPyyU3LzUYne3Gd9oj9c4Rzbq5hQnuGXSMT6Gujq45Il/+bunwq3lrB7wghLkiF45ygMwft37vgJ/NE8IAA==}
@@ -4050,6 +4062,10 @@ packages:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
     dev: true
 
+  /tiny-emitter/2.1.0:
+    resolution: {integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==}
+    dev: false
+
   /tiny-invariant/1.2.0:
     resolution: {integrity: sha512-1Uhn/aqw5C6RI4KejVeTg6mIS7IqxnLJ8Mv2tV5rTc0qWobay7pDUz6Wi392Cnc8ak1H0F2cjoRzb2/AW4+Fvg==}
     dev: true
@@ -4185,6 +4201,13 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: false
 
+  /unleash-proxy-client/2.4.3:
+    resolution: {integrity: sha512-ILJIHNSeh7ajHczemNE19Rl3NpVU3voFouYIgWCbJd+OhuJ9elfpuD1LF5yucEJq8AuWKkEM2AzUFFOTiv/2Sw==}
+    dependencies:
+      tiny-emitter: 2.1.0
+      uuid: 8.3.2
+    dev: false
+
   /update-browserslist-db/1.0.10_browserslist@4.21.5:
     resolution: {integrity: sha512-OztqDenkfFkbSG+tRxBeAnCVPckDBcvibKd35yDONx6OU8N7sqgwc7rCbkJ/WcYtVRZ4ba68d6byhC21GFh7sQ==}
     hasBin: true
@@ -4232,6 +4255,11 @@ packages:
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  /uuid/8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
+    dev: false
 
   /validate-npm-package-license/3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}

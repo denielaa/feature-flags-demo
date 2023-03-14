@@ -18,11 +18,6 @@ This project equipped with:
 
 # Setup
 
-```bash
-// copy .env file
-cp .env.sample .env
-```
-
 ### Install dependencies
 
 ```bash

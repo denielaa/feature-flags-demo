@@ -1,1 +1,1 @@
-export { PricingTable } from './PricingTable'
+export { PricingTableBoolean } from './PricingTableBoolean'

@@ -1,12 +1,20 @@
 import './styles.css'
 
-import { PricingTable } from '~/shared/components/PricingTable'
+import { FlagProvider } from '@unleash/proxy-client-react'
+
+// import { PricingTableBoolean } from '~/shared/components/PricingTable'
+import { PricingTableUserId } from '~/shared/components/PricingTable/PricingTableUserId'
+import { config as UnleashConfig } from '~/shared/configs/unleash'
 
 function App() {
   return (
-    <div className="flex justify-center mt-10">
-      <PricingTable />
-    </div>
+    <FlagProvider config={UnleashConfig}>
+      <div className="flex justify-center mt-10">
+        {/* <PricingTableBoolean /> */}
+
+        <PricingTableUserId />
+      </div>
+    </FlagProvider>
   )
 }
 
