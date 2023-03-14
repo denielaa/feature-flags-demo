@@ -40,6 +40,16 @@ pnpm analyze
 
 This project has several command generators to automatically create a new component or a page. Built with [Hygen](https://hygen.io/)
 
+### Issue
+
+Make sure you remove and reinstall hygen. 
+
+```bash
+pnpm remove hygen
+// then reinstall
+pnpm install hygen
+```
+
 ### Create new shared component
 
 ```bash
