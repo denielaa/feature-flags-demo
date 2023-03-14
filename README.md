@@ -1,8 +1,15 @@
-# vite-react-typescript
+# Feature Flags Demo
 
-Vite + React + TS template
+This project is to showcase implementation of Feature Flags using react library and Unleash.
 
-This template equiped with:
+## Stacks
+
+- React + Typescript
+- Daisy UI + Tailwindcss
+- Vite
+- PNPM
+
+This project equipped with:
 
 - Linter
 - Prettier
@@ -15,8 +22,6 @@ This template equiped with:
 // copy .env file
 cp .env.sample .env
 ```
-
-Replace the `VITE_BASE_API_URL` with your Backend API url
 
 ### Install dependencies
 
@@ -40,9 +45,9 @@ pnpm analyze
 
 This project has several command generators to automatically create a new component or a page. Built with [Hygen](https://hygen.io/)
 
-### Issue
+### Issues
 
-Make sure you remove and reinstall hygen. 
+Make sure you remove and reinstall hygen.
 
 ```bash
 pnpm remove hygen
@@ -67,7 +72,3 @@ npx hygen page-component new --page PageName --name ComponentName
 ```bash
 npx hygen page new PageName
 ```
-
-## TODO
-
-- [ ] Update documentation with the project structure

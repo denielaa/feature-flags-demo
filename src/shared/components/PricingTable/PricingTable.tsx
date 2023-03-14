@@ -1,6 +1,7 @@
 import { FC } from 'react'
 
 import { IPricing, PricingData } from './pricingConstants'
+import { getRandomPict } from './pricingUtils'
 
 interface PricingCardProps {
   pricing: IPricing
@@ -8,14 +9,14 @@ interface PricingCardProps {
 
 const PricingCard: FC<PricingCardProps> = ({ pricing }) => {
   return (
-    <div className="card w-96 bg-base-100 shadow-xl flex-1 hover:shadow-none">
-      <figure className="px-10 pt-10">
-        <img src="https://picsum.photos/400/100" className="rounded-xl" alt="picsum" />
+    <div className="card w-96 bg-base-100 shadow-2xl flex-1 hover:shadow-none">
+      <figure>
+        <img src={getRandomPict()} className="rounded-t-xl" alt="picsum" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">
           {pricing.title}
-          {pricing.isNew && <div className="badge badge-secondary">NEW</div>}
+          {pricing.isNew && <div className="badge badge-success">NEW</div>}
         </h2>
         <p>{pricing.description}</p>
 
@@ -42,7 +43,7 @@ const PricingCard: FC<PricingCardProps> = ({ pricing }) => {
 
 const PricingTable = () => {
   return (
-    <div className="flex flex-col bg-base-200 rounded-lg shadow-md p-6 mx-4 justify-center max-w-7xl">
+    <div className="flex flex-col bg-base-200 rounded-lg p-6 mx-4 justify-center max-w-7xl">
       <div className="flex flex-col justify-center items-center">
         <h2 className="text-2xl font-medium mb-4">Pricing Table</h2>
         <p className="text-gray-600 text-sm mb-8">
@@ -50,7 +51,7 @@ const PricingTable = () => {
         </p>
       </div>
 
-      <div className="flex flex-row gap-4 flex-wrap">
+      <div className="flex flex-row gap-5 flex-wrap">
         {PricingData.map((pricing, index) => (
           <PricingCard pricing={pricing} key={index} />
         ))}

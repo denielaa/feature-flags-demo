@@ -22,17 +22,17 @@ const ProPricing: IPricing = {
   isNew: false,
 }
 
-// const EnterprisePricing: IPricing = {
-//   title: 'Enterprise',
-//   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-//   features: ['Unlimited Storage', 'Unlimited Users', 'Unlimited Domains', 'Enterprise Support'],
-//   price: 29.99,
-//   isNew: true,
-// }
+const EnterprisePricing: IPricing = {
+  title: 'Enterprise',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  features: ['Unlimited Storage', 'Unlimited Users', 'Unlimited Domains', 'Enterprise Support'],
+  price: 29.99,
+  isNew: true,
+}
 
 const PricingData = [BasicPricing, ProPricing]
 // if (process.env.ENABLE_ENTERPRISE_PRICING) {
-//   PricingData.push(EnterprisePricing)
+PricingData.push(EnterprisePricing)
 // }
 
 export { PricingData }
