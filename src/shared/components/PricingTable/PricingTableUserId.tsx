@@ -7,6 +7,7 @@ import { PricingPro } from './PricingPro'
 
 const userId = 'user-123'
 
+// DEMO: to show how feature flag can be used with specific user
 const PricingTableUserId = () => {
   const isEnterpriseEnabled = useFlag('pricing.enterprise')
   const unleashContext = useUnleashContext()
